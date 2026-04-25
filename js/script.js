@@ -185,76 +185,7 @@ class Carousel3D {
 document.addEventListener('DOMContentLoaded', () => {
     new Carousel3D('gallery1');
     new Carousel3D('gallery2');
-    
-    // Vine decorations scroll effect
-    initVineDecorations();
 });
-
-// Vine Decorations - Scroll Triggered & Parallax
-function initVineDecorations() {
-    const vines = document.querySelectorAll('.vine-decoration');
-    if (!vines.length) return;
-    
-    const gallerySection = document.querySelector('#portfolio');
-    if (!gallerySection) return;
-    
-    // Get section bounds
-    const sectionTop = gallerySection.offsetTop;
-    const sectionHeight = gallerySection.offsetHeight;
-    const windowHeight = window.innerHeight;
-    
-    function handleScroll() {
-        const scrollY = window.scrollY;
-        const triggerPoint = sectionTop - windowHeight * 0.3;
-        const endPoint = sectionTop + sectionHeight;
-        
-        // Check if in gallery section range
-        if (scrollY > triggerPoint && scrollY < endPoint) {
-            // Calculate visibility (fade in/out)
-            const progress = Math.min(1, Math.max(0, 
-                (scrollY - triggerPoint) / (sectionHeight * 0.3)
-            ));
-            
-            vines.forEach(vine => {
-                vine.classList.add('visible');
-                
-                // Parallax effect - move opposite to scroll
-                const parallaxOffset = (scrollY - sectionTop) * 0.05;
-                if (vine.classList.contains('vine-left')) {
-                    vine.style.transform = `translateY(-50%) translateX(${parallaxOffset}px)`;
-                } else {
-                    vine.style.transform = `translateY(-50%) translateX(${-parallaxOffset}px)`;
-                }
-            });
-        } else if (scrollY <= triggerPoint) {
-            // Above section - hide
-            vines.forEach(vine => {
-                vine.classList.remove('visible');
-                vine.style.transform = 'translateY(-50%) translateX(0)';
-            });
-        } else {
-            // Below section - keep visible but stop parallax
-            vines.forEach(vine => {
-                vine.classList.add('visible');
-            });
-        }
-    }
-    
-    // Initial check
-    handleScroll();
-    
-    // Throttled scroll listener
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
