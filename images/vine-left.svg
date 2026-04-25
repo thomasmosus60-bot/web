@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="200" height="400">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5a27;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#4a7c3f;stop-opacity:0.6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main vine stem -->
+  <path d="M100 380 Q95 300 100 200 Q105 100 100 20" 
+        stroke="#3d6b35" stroke-width="3" fill="none" opacity="0.7"/>
+  
+  <!-- Left side leaves -->
+  <g fill="url(#leafGrad)">
+    <!-- Bottom leaves -->
+    <ellipse cx="70" cy="360" rx="25" ry="8" transform="rotate(-30 70 360)"/>
+    <ellipse cx="55" cy="340" rx="20" ry="6" transform="rotate(-45 55 340)"/>
+    <ellipse cx="80" cy="320" rx="22" ry="7" transform="rotate(-25 80 320)"/>
+    
+    <!-- Mid leaves -->
+    <ellipse cx="50" cy="290" rx="18" ry="5" transform="rotate(-50 50 290)"/>
+    <ellipse cx="75" cy="260" rx="20" ry="6" transform="rotate(-35 75 260)"/>
+    <ellipse cx="55" cy="230" rx="16" ry="5" transform="rotate(-55 55 230)"/>
+    <ellipse cx="80" cy="200" rx="18" ry="5" transform="rotate(-30 80 200)"/>
+    
+    <!-- Upper leaves -->
+    <ellipse cx="60" cy="170" rx="14" ry="4" transform="rotate(-45 60 170)"/>
+    <ellipse cx="75" cy="140" rx="16" ry="5" transform="rotate(-35 75 140)"/>
+    <ellipse cx="65" cy="110" rx="12" ry="4" transform="rotate(-40 65 110)"/>
+    <ellipse cx="78" cy="80" rx="14" ry="4" transform="rotate(-30 78 80)"/>
+    <ellipse cx="70" cy="50" rx="10" ry="3" transform="rotate(-35 70 50)"/>
+  </g>
+  
+  <!-- Right side leaves (smaller) -->
+  <g fill="url(#leafGrad)" opacity="0.6">
+    <ellipse cx="130" cy="350" rx="18" ry="5" transform="rotate(30 130 350)"/>
+    <ellipse cx="145" cy="320" rx="15" ry="4" transform="rotate(45 145 320)"/>
+    <ellipse cx="125" cy="285" rx="16" ry="5" transform="rotate(35 125 285)"/>
+    <ellipse cx="140" cy="250" rx="14" ry="4" transform="rotate(40 140 250)"/>
+    <ellipse cx="130" cy="215" rx="12" ry="3" transform="rotate(30 130 215)"/>
+    <ellipse cx="145" cy="180" rx="14" ry="4" transform="rotate(45 145 180)"/>
+    <ellipse cx="135" cy="145" rx="11" ry="3" transform="rotate(35 135 145)"/>
+    <ellipse cx="148" cy="110" rx="12" ry="3" transform="rotate(40 148 110)"/>
+    <ellipse cx="140" cy="75" rx="10" ry="3" transform="rotate(30 140 75)"/>
+  </g>
+  
+  <!-- Small accent dots -->
+  <circle cx="85" cy="310" r="2" fill="#5a8c4f" opacity="0.5"/>
+  <circle cx="65" cy="250" r="1.5" fill="#5a8c4f" opacity="0.4"/>
+  <circle cx="88" cy="180" r="1.5" fill="#5a8c4f" opacity="0.4"/>
+  <circle cx="120" cy="300" r="1" fill="#5a8c4f" opacity="0.3"/>
+  <circle cx="135" cy="220" r="1" fill="#5a8c4f" opacity="0.3"/>
+</svg>
