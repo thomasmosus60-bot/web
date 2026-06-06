@@ -173,18 +173,9 @@ function normalizeCake(cake, index) {
 }
 
 async function fetchCakes() {
-    if (!API_BASE_URL) return FALLBACK_CAKES;
-
-    try {
-        const response = await fetch(apiUrl('/api/cakes'));
-        if (!response.ok) throw new Error('Could not load cakes');
-        const data = await response.json();
-        const cakes = Array.isArray(data) ? data : data.cakes || data.data || [];
-        return cakes.map(normalizeCake);
-    } catch (error) {
-        console.warn(error);
-        return FALLBACK_CAKES;
-    }
+    // Keep the original website photos. The backend cake API currently returns sample cake data
+    // without image paths, so using it here changes the gallery images.
+    return FALLBACK_CAKES;
 }
 
 function createCakeSlide(cake) {
