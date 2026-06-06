@@ -1,4 +1,4 @@
-const API_BASE_URL = '';
+const API_BASE_URL = 'https://honore-cakes-website.onrender.com';
 
 const FALLBACK_CAKES = [
     { id: 'cake-1', name: 'Mickey Safari Cake', image: 'images/cake6.jpg', category: 'signature' },
