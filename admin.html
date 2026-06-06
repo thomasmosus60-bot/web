@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HONORE CAKES - Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">HONORE CAKES</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="admin-page">
+            <h2>Admin</h2>
+            <p class="section-subtitle">Vendor product management</p>
+
+            <form id="admin-login" class="admin-panel">
+                <input type="email" name="email" placeholder="Email" autocomplete="username" required>
+                <input type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+                <button type="submit">Login</button>
+                <p id="login-message" class="page-status"></p>
+            </form>
+
+            <div id="product-admin" hidden>
+                <form id="product-form" class="admin-panel">
+                    <input type="hidden" name="id">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <textarea name="description" placeholder="Description" rows="4" required></textarea>
+                    <input type="text" name="category" placeholder="Category" required>
+                    <input type="number" name="price" placeholder="Price" min="0" step="1" required>
+                    <select name="image" required>
+                        <option value="">Choose image</option>
+                        <option value="images/cake6.jpg">images/cake6.jpg</option>
+                        <option value="images/cake.jpg.jpeg">images/cake.jpg.jpeg</option>
+                        <option value="images/cake2.jpeg">images/cake2.jpeg</option>
+                        <option value="images/cake3.jpeg">images/cake3.jpeg</option>
+                        <option value="images/cake4.jpeg">images/cake4.jpeg</option>
+                        <option value="images/cake5.jpg">images/cake5.jpg</option>
+                        <option value="images/1.jpg">images/1.jpg</option>
+                        <option value="images/2.jpg">images/2.jpg</option>
+                        <option value="images/3.jpg">images/3.jpg</option>
+                        <option value="images/4.jpg">images/4.jpg</option>
+                        <option value="images/5.jpg">images/5.jpg</option>
+                        <option value="images/6.jpg">images/6.jpg</option>
+                    </select>
+                    <input type="text" name="flavours" placeholder="Flavours, comma separated">
+                    <input type="text" name="size" placeholder="Size">
+                    <label class="checkbox-row"><input type="checkbox" name="featured"> Featured</label>
+                    <div class="admin-actions">
+                        <button type="submit">Save Product</button>
+                        <button type="button" id="clear-product-form">Clear</button>
+                    </div>
+                    <p id="product-message" class="page-status"></p>
+                </form>
+
+                <div id="admin-products" class="admin-products"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HONORE CAKES. All rights reserved.</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
