@@ -1,0 +1,256 @@
+.page-main {
+    padding-top: 82px;
+    min-height: 100vh;
+    background: #000000;
+}
+
+.products-page,
+.admin-page {
+    max-width: 1200px;
+}
+
+.page-status {
+    color: #b0b0b0;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card,
+.admin-panel,
+.admin-product,
+.product-modal-content {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #ffffff;
+}
+
+.product-card {
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(233, 30, 99, 0.2);
+}
+
+.product-card img,
+.admin-product img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-card img {
+    height: 230px;
+}
+
+.product-card h3,
+.product-card p,
+.product-category {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.product-card h3 {
+    color: #ffffff;
+    margin-top: 0.35rem;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 400;
+}
+
+.product-card p,
+.detail-price {
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.product-category {
+    display: inline-block;
+    color: #e91e63;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.product-modal[hidden] {
+    display: none;
+}
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.product-modal-content {
+    position: relative;
+    width: min(960px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: transparent;
+    border: 0;
+    color: #d4af37;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.product-details {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.9fr) 1.1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.product-details img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-details h2 {
+    text-align: left;
+    margin: 0.5rem 0;
+}
+
+.product-details p,
+.product-details dd {
+    color: #cccccc;
+}
+
+.product-details dl {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 0.7rem 1rem;
+    margin-top: 1.5rem;
+}
+
+.product-details dt {
+    color: #d4af37;
+}
+
+.admin-panel {
+    display: grid;
+    gap: 1rem;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.admin-panel input,
+.admin-panel textarea,
+.admin-panel select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    background: #0d0d0d;
+    color: #ffffff;
+    font: inherit;
+}
+
+.admin-panel input:focus,
+.admin-panel textarea:focus,
+.admin-panel select:focus {
+    outline: none;
+    border-color: #e91e63;
+}
+
+.admin-panel button,
+.admin-product button {
+    padding: 0.8rem 1.2rem;
+    border: 0;
+    border-radius: 8px;
+    background: #e91e63;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.admin-panel button:hover,
+.admin-product button:hover {
+    background: #c2185b;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #cccccc;
+}
+
+.checkbox-row input {
+    width: auto;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.admin-products {
+    display: grid;
+    gap: 1rem;
+}
+
+.admin-product {
+    display: grid;
+    grid-template-columns: 90px 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.admin-product img {
+    height: 80px;
+    border-radius: 8px;
+}
+
+.admin-product h3 {
+    color: #ffffff;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 400;
+}
+
+.admin-product p {
+    color: #b0b0b0;
+}
+
+@media (max-width: 768px) {
+    .product-details,
+    .admin-product {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-product img {
+        width: 100%;
+        height: 180px;
+    }
+}
