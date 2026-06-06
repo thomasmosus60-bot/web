@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HONORE CAKES - Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">HONORE CAKES</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="products-page">
+            <h2>Products</h2>
+            <p class="section-subtitle">Choose from our latest cake collection</p>
+            <div id="products-status" class="page-status">Loading products...</div>
+            <div id="products-grid" class="products-grid"></div>
+        </section>
+    </main>
+
+    <div id="product-modal" class="product-modal" hidden>
+        <div class="product-modal-content">
+            <button id="product-modal-close" class="modal-close" aria-label="Close">&times;</button>
+            <div id="product-details" class="product-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HONORE CAKES. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/honore.cakes?igsh=MXQwMjZ4NGtjOXhscA==" target="_blank" aria-label="Instagram">📸</a>
+            <a href="https://wa.me/919746401163" target="_blank" aria-label="WhatsApp">💬</a>
+            <a href="mailto:neethu.projects@gmail.com" aria-label="Email">✉️</a>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+</body>
+</html>
